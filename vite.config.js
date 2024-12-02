@@ -1,5 +1,8 @@
 // vite.config.js
 export default {
-    base: '/pascua/',  
+    base: '/pascua/', 
+    build: {
+        outDir: 'dist',
+    } 
   };
   
