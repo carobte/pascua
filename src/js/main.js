@@ -1,14 +1,12 @@
-import '../css/style.css'
+import '../css/style.css';
 
-// script.js
-const eggs = document.querySelectorAll('.egg');
+document.getElementById('surpriseBtn').addEventListener('click', () => {
+  // alert('¡Sorpresa! Los huevos de Pascua están listos para ser encontrados!');
 
-// Asignar un evento de clic a cada huevo
-eggs.forEach((egg, index) => {
-  egg.addEventListener('click', () => {
-    egg.style.backgroundColor = '#90ee90'; // Cambia el color del huevo al hacer clic
-    egg.textContent = '🌟'; // Muestra un ícono de estrella
-    alert(`¡Encontraste el huevo #${index + 1}! 🥚`);
+  // Cambiar colores de los huevos para hacerlos más divertidos
+  const eggs = document.querySelectorAll('.egg');
+  eggs.forEach(egg => {
+    const randomColor = `hsl(${Math.random() * 360}, 100%, 75%)`;
+    egg.style.backgroundColor = randomColor;
   });
 });
-
